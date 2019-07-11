@@ -50,10 +50,23 @@ class AlbumList extends Component{
             })
 
         ) : (
-            <Text>{'Fetching Data Please Wait ...'}</Text>
+            <View style={styles.pleaseWaitStyle}>
+                <Text>{'Fetching Data Please Wait ...'}</Text>
+            </View>
         );
 
         return albumViews;
+    }
+}
+
+const styles = {
+
+    pleaseWaitStyle : {
+        width:null,
+        height: 600,
+        flex: 1,
+        alignItems: 'center',
+        justifyContent:'center'
     }
 }
 
